@@ -2,6 +2,8 @@
 
 AI-powered semantic search built with Next.js, Drupal (via Decoupled.io), and Pinecone. Search your content using natural language queries that understand meaning, not just keywords.
 
+![Decoupled Search Screenshot](screenshot.png)
+
 ## Features
 
 - **Semantic Search**: Uses AI embeddings to understand the meaning of queries

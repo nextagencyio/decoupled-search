@@ -14,7 +14,9 @@ export const GET_ALL_ARTICLES = gql`
         body {
           processed
         }
-        summary
+        summary {
+          value
+        }
         category
         tags
         readTime
@@ -44,7 +46,9 @@ export const GET_ARTICLE_BY_SLUG = gql`
             body {
               processed
             }
-            summary
+            summary {
+              value
+            }
             category
             tags
             readTime
@@ -71,7 +75,7 @@ export function transformArticle(node: any): Article | null {
     title: node.title,
     slug,
     body: node.body?.processed || '',
-    summary: node.summary || '',
+    summary: node.summary?.value || '',
     category: node.category || 'General',
     tags: node.tags ? node.tags.split(',').map((t: string) => t.trim()) : [],
     readTime: node.readTime || '5 min read',

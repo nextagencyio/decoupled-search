@@ -109,7 +109,9 @@ async function fetchArticles(): Promise<Article[]> {
           body {
             processed
           }
-          summary
+          summary {
+            value
+          }
           category
           tags
           readTime
@@ -148,7 +150,7 @@ async function fetchArticles(): Promise<Article[]> {
     title: node.title,
     slug: node.path?.replace(/^\/articles\//, '') || node.id,
     body: node.body?.processed || '',
-    summary: node.summary || '',
+    summary: node.summary?.value || '',
     category: node.category || 'General',
     tags: node.tags ? node.tags.split(',').map((t: string) => t.trim()) : [],
     readTime: node.readTime || '5 min read',
