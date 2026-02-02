@@ -134,6 +134,40 @@ Adjust search parameters in `lib/pinecone.ts`:
 - `topK`: Number of results to return (default: 10)
 - Embedding model: Uses `llama-text-embed-v2` via Pinecone inference
 
+## Demo Mode
+
+Demo mode allows you to showcase the semantic search application without connecting to Pinecone or Drupal. It displays simulated search results with sample articles.
+
+### Enable Demo Mode
+
+Set the environment variable:
+
+```bash
+NEXT_PUBLIC_DEMO_MODE=true
+```
+
+Or add to `.env.local`:
+```
+NEXT_PUBLIC_DEMO_MODE=true
+```
+
+### What Demo Mode Does
+
+- Shows a "Demo Mode" banner at the top of the page
+- Returns simulated semantic search results (keyword-based matching)
+- Displays sample tech articles
+- No Pinecone or Drupal backend required
+
+### Removing Demo Mode
+
+To convert to a production app with real semantic search:
+
+1. Delete `lib/demo-mode.ts`
+2. Delete `data/mock/` directory
+3. Delete `app/components/DemoModeBanner.tsx`
+4. Remove `DemoModeBanner` import and usage from `app/layout.tsx`
+5. Remove demo mode checks from `app/page.tsx` and `app/api/search/route.ts`
+
 ## Deployment
 
 ### Vercel
@@ -142,6 +176,8 @@ Adjust search parameters in `lib/pinecone.ts`:
 2. Import in Vercel
 3. Add environment variables
 4. Deploy
+
+Set `NEXT_PUBLIC_DEMO_MODE=true` in Vercel environment variables for a demo deployment.
 
 ### Important Notes
 

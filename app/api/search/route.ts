@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { searchArticles } from '@/lib/pinecone'
+import { isDemoMode, mockSearch } from '@/lib/demo-mode'
 
 export async function GET(request: NextRequest) {
   const searchParams = request.nextUrl.searchParams
@@ -11,6 +12,16 @@ export async function GET(request: NextRequest) {
       { error: 'Query parameter "q" is required' },
       { status: 400 }
     )
+  }
+
+  // Demo mode: use mock search
+  if (isDemoMode()) {
+    const results = mockSearch(query, limit)
+    return NextResponse.json({
+      query,
+      results,
+      totalResults: results.length,
+    })
   }
 
   try {

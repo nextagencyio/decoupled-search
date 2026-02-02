@@ -1,6 +1,7 @@
 import Header from './components/Header'
 import SearchResults from './components/SearchResults'
 import SetupGuide from './components/SetupGuide'
+import { isDemoMode } from '@/lib/demo-mode'
 
 // Check if required environment variables are set
 function isConfigured() {
@@ -12,7 +13,8 @@ function isConfigured() {
 }
 
 export default function HomePage() {
-  const configured = isConfigured()
+  // Demo mode bypasses configuration check
+  const configured = isDemoMode() || isConfigured()
 
   return (
     <>

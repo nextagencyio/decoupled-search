@@ -1,0 +1,94 @@
+{
+  "articles": [
+    {
+      "id": "article-1",
+      "title": "Getting Started with TypeScript",
+      "slug": "getting-started-typescript",
+      "body": "<p>TypeScript is a strongly typed programming language that builds on JavaScript, giving you better tooling at any scale. This guide will help you understand the fundamentals of TypeScript and how to integrate it into your projects.</p><h2>Why TypeScript?</h2><p>TypeScript adds optional static typing and class-based object-oriented programming to the language. It helps catch errors early in development and improves code quality.</p><h2>Basic Types</h2><p>TypeScript supports several basic types including string, number, boolean, array, tuple, enum, and more. Understanding these types is crucial for effective TypeScript development.</p>",
+      "summary": "Learn the fundamentals of TypeScript and how to integrate it into your JavaScript projects for better type safety and tooling.",
+      "category": "Programming",
+      "tags": ["TypeScript", "JavaScript", "Programming", "Web Development"],
+      "image": {
+        "url": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&q=80",
+        "alt": "Code on computer screen"
+      },
+      "readTime": "8 min read",
+      "publishedAt": "2026-01-15"
+    },
+    {
+      "id": "article-2",
+      "title": "Building Semantic Search with Vector Databases",
+      "slug": "semantic-search-vector-databases",
+      "body": "<p>Vector databases are revolutionizing how we approach search and retrieval. Unlike traditional keyword-based search, semantic search understands the meaning behind queries.</p><h2>What is Semantic Search?</h2><p>Semantic search uses machine learning to understand the intent and contextual meaning of search queries. It goes beyond simple keyword matching to find truly relevant results.</p><h2>Vector Embeddings</h2><p>The key to semantic search is converting text into vector embeddings - numerical representations that capture semantic meaning. Similar concepts have similar vectors.</p>",
+      "summary": "Discover how vector databases enable semantic search that understands meaning, not just keywords.",
+      "category": "AI & Machine Learning",
+      "tags": ["Vector Database", "Semantic Search", "AI", "Pinecone", "Embeddings"],
+      "image": {
+        "url": "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&q=80",
+        "alt": "AI neural network visualization"
+      },
+      "readTime": "10 min read",
+      "publishedAt": "2026-01-10"
+    },
+    {
+      "id": "article-3",
+      "title": "React Best Practices in 2026",
+      "slug": "react-best-practices-2026",
+      "body": "<p>React continues to evolve, and staying current with best practices is essential for building maintainable applications. Here are the patterns and practices recommended for modern React development.</p><h2>Server Components</h2><p>React Server Components allow you to render components on the server, reducing bundle size and improving performance. They're becoming the standard for data fetching in modern React apps.</p><h2>State Management</h2><p>While Redux remains popular, many teams are moving to simpler solutions like Zustand or relying on React's built-in hooks for state management.</p>",
+      "summary": "Stay up to date with the latest React patterns and practices for building modern, maintainable applications.",
+      "category": "Web Development",
+      "tags": ["React", "JavaScript", "Frontend", "Best Practices"],
+      "image": {
+        "url": "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=800&q=80",
+        "alt": "React logo"
+      },
+      "readTime": "12 min read",
+      "publishedAt": "2026-01-05"
+    },
+    {
+      "id": "article-4",
+      "title": "Authentication Patterns for Modern Web Apps",
+      "slug": "authentication-patterns-modern-web",
+      "body": "<p>Security is paramount in modern web applications. Understanding different authentication patterns helps you choose the right approach for your project.</p><h2>JWT vs Session-Based Auth</h2><p>JSON Web Tokens (JWT) are stateless and work well for APIs, while session-based authentication is often simpler for traditional web apps. Each has trade-offs to consider.</p><h2>OAuth 2.0 and OpenID Connect</h2><p>For allowing users to sign in with third-party providers like Google or GitHub, OAuth 2.0 with OpenID Connect is the industry standard.</p>",
+      "summary": "Explore authentication patterns including JWT, sessions, and OAuth for securing your web applications.",
+      "category": "Security",
+      "tags": ["Authentication", "Security", "JWT", "OAuth", "Web Development"],
+      "image": {
+        "url": "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=800&q=80",
+        "alt": "Lock and security concept"
+      },
+      "readTime": "15 min read",
+      "publishedAt": "2025-12-20"
+    },
+    {
+      "id": "article-5",
+      "title": "Introduction to GraphQL APIs",
+      "slug": "introduction-graphql-apis",
+      "body": "<p>GraphQL is a query language for APIs that gives clients the power to ask for exactly what they need. It's become increasingly popular as an alternative to REST.</p><h2>Why GraphQL?</h2><p>GraphQL solves common problems with REST APIs like over-fetching and under-fetching data. With GraphQL, you define exactly what data you need in a single request.</p><h2>Schema and Types</h2><p>GraphQL APIs are built around a strongly-typed schema. This provides excellent developer experience with auto-completion and built-in documentation.</p>",
+      "summary": "Learn the fundamentals of GraphQL and why it's becoming the preferred choice for modern API development.",
+      "category": "APIs",
+      "tags": ["GraphQL", "API", "Backend", "Web Development"],
+      "image": {
+        "url": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&q=80",
+        "alt": "API network visualization"
+      },
+      "readTime": "11 min read",
+      "publishedAt": "2025-12-15"
+    },
+    {
+      "id": "article-6",
+      "title": "Deploying Applications with Docker",
+      "slug": "deploying-applications-docker",
+      "body": "<p>Docker has transformed how we deploy and manage applications. Containers provide consistent environments from development to production.</p><h2>Container Basics</h2><p>A Docker container packages your application with all its dependencies, ensuring it runs the same way everywhere. No more 'it works on my machine' problems.</p><h2>Docker Compose</h2><p>For multi-container applications, Docker Compose lets you define and run multiple services with a single command. It's essential for local development and testing.</p>",
+      "summary": "Master Docker containerization to create consistent, portable application deployments.",
+      "category": "DevOps",
+      "tags": ["Docker", "DevOps", "Containers", "Deployment"],
+      "image": {
+        "url": "https://images.unsplash.com/photo-1605745341112-85968b19335b?w=800&q=80",
+        "alt": "Server containers"
+      },
+      "readTime": "9 min read",
+      "publishedAt": "2025-12-10"
+    }
+  ]
+}
