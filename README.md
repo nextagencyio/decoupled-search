@@ -104,6 +104,7 @@ decoupled-search/
 | `npm run setup` | Interactive setup wizard |
 | `npm run setup-content` | Import sample content to Drupal |
 | `npm run index` | Index content in Pinecone |
+| `npm run index:reset` | Clear index and re-index all content |
 
 ## Re-indexing Content
 

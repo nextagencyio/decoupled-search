@@ -394,8 +394,14 @@ Get a free API key at: ${COLORS.cyan}https://pinecone.io${COLORS.reset}
       const shouldIndex = await confirm('Index content in Pinecone now?')
 
       if (shouldIndex) {
+        const shouldReset = await confirm('Reset index first? (Recommended to avoid duplicates)', true)
+
         log('\nIndexing content (this may take a moment)...', 'dim')
-        const indexResult = await runCommand('npx', ['tsx', 'scripts/index-content.ts'])
+        const indexArgs = ['tsx', 'scripts/index-content.ts']
+        if (shouldReset) {
+          indexArgs.push('--reset')
+        }
+        const indexResult = await runCommand('npx', indexArgs)
 
         if (indexResult.success) {
           logSuccess('Content indexed in Pinecone')

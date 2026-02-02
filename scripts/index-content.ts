@@ -199,6 +199,9 @@ async function ensureIndexExists(pinecone: Pinecone, indexName: string): Promise
 }
 
 async function main() {
+  // Check for --reset flag
+  const shouldReset = process.argv.includes('--reset')
+
   console.log(`
 ${COLORS.cyan}╔═══════════════════════════════════════════════════════════╗
 ║                                                           ║
@@ -225,6 +228,20 @@ ${COLORS.cyan}╔═════════════════════
     // Ensure index exists
     await ensureIndexExists(pinecone, indexName)
     const index = pinecone.index(indexName)
+
+    // Reset index if requested
+    if (shouldReset) {
+      log('Resetting index (clearing all existing vectors)...', 'yellow')
+      try {
+        await index.deleteAll()
+        logSuccess('Index cleared')
+      } catch (err: any) {
+        // Index might be empty, which is fine
+        if (!err.message?.includes('empty')) {
+          log('Note: Could not clear index (may already be empty)', 'dim')
+        }
+      }
+    }
 
     // Fetch articles from Drupal
     log('Fetching articles from Drupal...', 'dim')
