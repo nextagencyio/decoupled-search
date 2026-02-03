@@ -5,12 +5,18 @@ import { ArrowLeft, Clock, Tag, Calendar } from 'lucide-react'
 import Header from '@/app/components/Header'
 import client from '@/lib/apollo-client'
 import { GET_ARTICLE_BY_SLUG, transformArticle } from '@/lib/queries'
+import { isDemoMode, getMockArticleBySlug } from '@/lib/demo-mode'
 
 interface ArticlePageProps {
   params: Promise<{ slug: string }>
 }
 
 async function getArticle(slug: string) {
+  // Demo mode: use mock data
+  if (isDemoMode()) {
+    return getMockArticleBySlug(slug)
+  }
+
   try {
     const { data } = await client.query({
       query: GET_ARTICLE_BY_SLUG,
