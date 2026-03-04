@@ -4,7 +4,7 @@
   "description": "Full-text semantic search powered by Drupal and Pinecone",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "WATCHPACK_POLLING=true next dev --webpack",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
